@@ -33,10 +33,12 @@ module Lita
         attr_reader :metadata
 
         def initialize(id, name, real_name, metadata)
+          puts "USER DATA"
+          puts metadata
           @id = id
           @name = name
           @real_name = real_name.to_s
-          @email = metadata['profile']['email'].to_s
+          @email = metadata['email'].to_s
           @metadata = metadata
         end
 
